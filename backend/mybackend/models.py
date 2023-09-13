@@ -11,3 +11,6 @@ class Spectrum(models.Model):
     wavelength = models.FloatField()
     concentration = models.FloatField()
     intensity = models.FloatField()
+
+
+

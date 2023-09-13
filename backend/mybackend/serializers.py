@@ -1,6 +1,13 @@
 from rest_framework import serializers
 from .models import UploadedFile
 from .models import Spectrum
+from django.contrib.auth.models import User
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email', 'password']
 
 class UploadedFileSerializer(serializers.ModelSerializer):
     file = serializers.FileField()
